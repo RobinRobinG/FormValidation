@@ -1,0 +1,38 @@
+@using FormSubmission.Models
+@model User
+@{
+    ViewData["Home"] = "Home Page";
+}
+<div class="wrapper">
+    <div class="header">
+        <h1>Dojo Form Validation</h1>
+    </div>
+    <form asp-action="DojoForm" asp-controller="Home" method="POST">
+        <div>
+            <label asp-for="FirstName"></label>
+            <input type="text" name="FirstName" asp-for="FirstName">
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <div>
+            <label asp-for="LastName"></label>
+            <input type="text" name="LastName" asp-for="LastName">
+            <span asp-validation-for="LastName"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input type="email" name="Email" asp-for="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Age"></label>
+            <input type="text" name="Age" asp-for="Age">
+            <span asp-validation-for="Age"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input type="password" name="Password" asp-for="Password">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <button value="Add User" type="submit">Submit</button>
+    </form>
+</div>

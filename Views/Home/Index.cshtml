@@ -9,6 +9,11 @@
     </div>
     <form asp-action="DojoForm" asp-controller="Home" method="POST">
         <div>
+            <label asp-for="FutureDate"></label>
+            <input type="date" name="FutureDate" asp-for="FutureDate">
+            <span asp-validation-for="FutureDate"></span>
+        </div>
+        <div>
             <label asp-for="FirstName"></label>
             <input type="text" name="FirstName" asp-for="FirstName">
             <span asp-validation-for="FirstName"></span>

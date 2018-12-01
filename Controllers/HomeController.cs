@@ -13,7 +13,6 @@ namespace FormSubmission.Controllers
         [Route("")]
         public IActionResult Index()
         {
-
             return View();
         }
 

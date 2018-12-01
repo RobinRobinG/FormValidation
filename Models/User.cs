@@ -4,6 +4,11 @@ namespace FormSubmission.Models
     public class User
     {
         [Required]
+        [FutureDate]
+        [Display(Name = "Select a Future Date:")]
+        public string FutureDate { get; set; }
+
+        [Required]
         [MinLength(3)]
         [Display(Name = "First Name:")]
         public string FirstName { get; set; }
